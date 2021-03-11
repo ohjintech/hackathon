@@ -1,0 +1,26 @@
+{
+	"manifest_version": 2,
+
+	"name": "Ty and Jin's Fantastic Quick Stock Viewer",
+	"short_name": "QuickStonk",
+	"version": "0.1",
+	"description": "Places the lastest stock price whenever a company's name from a user defined portfolio shows up on the webpage.",
+	"author": "Ty Doan, Jin Taco",
+
+	"background": {
+    "scripts": [
+			"jquery-3.1.1.min.js",
+      "client/main.js"
+    ],
+		"matches": ["https://stackoverflow.com/*"],
+    "persistent": true
+  }
+
+	"content_scripts": [
+		{
+			"js": ["jquery-3.1.1.min.js", "client/main.js"],
+			"persistent": true
+		}
+	]
+
+}
